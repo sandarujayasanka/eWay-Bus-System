@@ -11,7 +11,7 @@ configurable string DB_PASSWORD = "";
 configurable string DB_NAME = "epass_system";
 configurable int DB_PORT = 3306;
 
-// Primary MySQL client (declare only once)
+// Primary MySQL client
 final mysql:Client otherdbClient = check new mysql:Client(
     host = DB_HOST,
     port = DB_PORT,
@@ -53,7 +53,7 @@ service /user on userListener {
         }
     }
 
-    // Login endpoint - FIXED (returns cookie via header)
+    // Login endpoint
     resource function post login(http:Caller caller, http:Request req) returns error? {
         do {
             json payload = check req.getJsonPayload();
@@ -79,7 +79,6 @@ service /user on userListener {
             if dbPassword == hashedPassword {
                 http:Response res = new;
                 // Manually set a cookie header since 'setCookie' isn't available.
-                // NOTE: 'encodeUriComponent' is also not available, so we use a simple approach.
                 res.setHeader("Set-Cookie", "user_email=" + email + "; Path=/; HttpOnly; SameSite=Lax");
                 
                 res.setPayload({
@@ -99,7 +98,7 @@ service /user on userListener {
         }
     }
     
-    // User profile endpoint - FIXED (reads cookie via header)
+    // User profile endpoint
     resource function get profile(http:Caller caller, http:Request req) returns error? {
         // Manually parse the cookie header since 'getCookie' isn't available
         string|http:HeaderNotFoundError cookieHeader = req.getHeader("Cookie");
@@ -108,7 +107,7 @@ service /user on userListener {
         if cookieHeader is string {
             // Find the "user_email" cookie value without using 'split'
             int? startIndex = cookieHeader.indexOf("user_email=");
-            if (startIndex is int) { // Check if a value was found
+            if (startIndex is int) {
                 int startValueIndex = startIndex + 11;
                 int? endIndex = cookieHeader.indexOf(";", startValueIndex);
                 

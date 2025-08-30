@@ -1,0 +1,21 @@
+[package]
+org = "userorg"
+name = "backend"
+version = "0.1.0"
+
+[[dependency]]
+org = "ballerina"
+name = "sql"
+version = "1.14.0"
+
+[[dependency]]
+org = "ballerinax"
+name = "mysql"
+version = "1.14.0"
+
+[platform.java11]
+graalvmCompatible = true
+
+[[platform.java11.dependency]]
+path = "./libs/mysql-connector-j-9.3.0.jar"
+

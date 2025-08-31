@@ -30,7 +30,7 @@ frontend/    # React frontend (Vite)
    - `npm install`
    - Run: `npm run dev`
 
-4) Open the app: http://localhost:5173
+4) Open the app: http://localhost:3000.
 
 ## Running Locally
 
@@ -47,7 +47,7 @@ cd frontend
 npm install
 npm run dev
 ```
-Open http://localhost:5173.
+Open http://localhost:3000.
 
 ## First-time Flow
 1) Register a user via UI (`/register`).

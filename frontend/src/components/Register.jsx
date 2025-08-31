@@ -36,10 +36,7 @@ export default function Register() {
   };
 
   return (
-    <div 
-      className="relative flex min-h-screen items-center justify-center bg-cover bg-center" 
-      style={{ backgroundImage: 'url("/images/b4.jpg")' }}
-    >
+    <div className="relative flex min-h-screen items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url("/images/b4.jpg")' }}>
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -55,56 +52,23 @@ export default function Register() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="username" className="block text-gray-700 text-sm font-medium mb-2">Username</label>
-              <input 
-                name="username" 
-                id="username"
-                placeholder="Enter your username" 
-                value={form.username} 
-                onChange={handleChange} 
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-              />
+              <input name="username" id="username" placeholder="Enter your username" value={form.username} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"/>
             </div>
             <div>
               <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-2">Email</label>
-              <input 
-                name="email" 
-                id="email"
-                placeholder="Enter your email" 
-                type="email" 
-                value={form.email} 
-                onChange={handleChange} 
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-              />
+              <input name="email" id="email" placeholder="Enter your email" type="email" value={form.email} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"/>
             </div>
             <div>
               <label htmlFor="password" className="block text-gray-700 text-sm font-medium mb-2">Password</label>
               <div className="relative">
-                <input 
-                  name="password" 
-                  id="password"
-                  placeholder="********" 
-                  type={showPassword ? "text" : "password"} 
-                  value={form.password} 
-                  onChange={handleChange} 
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 pr-10"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-700 focus:outline-none"
-                >
+                <input name="password" id="password" placeholder="********" type={showPassword ? "text" : "password"} value={form.password} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 pr-10"/>
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-700 focus:outline-none">
                   {showPassword ? <IoEyeOffOutline size={20} /> : <IoEyeOutline size={20} />}
                 </button>
               </div>
             </div>
             
-            <button 
-              type="submit"
-              className="w-full py-3 bg-purple-600 text-white rounded-lg font-semibold text-lg hover:bg-purple-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-            >
+            <button type="submit" className="w-full py-3 bg-purple-600 text-white rounded-lg font-semibold text-lg hover:bg-purple-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
               Register
             </button>
           </form>
@@ -121,11 +85,7 @@ export default function Register() {
 
         {/* Image Section (Right Side) */}
         <div className="hidden md:block md:w-1/2 relative">
-          <img
-            src="/images/card2.jpg"
-            alt="Register background"
-            className="w-full h-full object-cover"
-          />
+          <img src="/images/card.png" alt="Register background" className="w-full h-full object-cover"/>
         </div>
       </div>
     </div>

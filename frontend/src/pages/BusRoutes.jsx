@@ -91,10 +91,10 @@ export default function Home() {
   // Static Data for Routes (replace with API call later)
   const allRoutes = [
     { id: 1, name: 'Colombo - Galle', highway: 'Southern Expressway (E01)', duration: '~2 hours', routeNo: 'Route 100' },
-    { id: 2, name: 'Colombo - Matara', highway: 'Southern Expressway (E01)', duration: '~2.5 hours', routeNo: 'Route 101' },
+    { id: 2, name: 'Kottawa - Matara', highway: 'Southern Expressway (E01)', duration: '~2.5 hours', routeNo: 'Route 101' },
     { id: 3, name: 'Colombo - Katunayake', highway: 'Colombo-Katunayake Expressway (E03)', duration: '~45 minutes', routeNo: 'Route 102' },
-    { id: 4, name: 'Colombo - Kandy', highway: 'Central Expressway (E04)', duration: '~3 hours', routeNo: 'Route 103' },
-    { id: 5, name: 'Colombo - Jaffna', highway: 'Northern Expressway', duration: '~6 hours', routeNo: 'Route 104' },
+    { id: 4, name: 'Kadawatha - Galle', highway: 'Southern Expressway (E01)', duration: '~2 hours', routeNo: 'Route 103' },
+    { id: 5, name: 'Panadura - Matara', highway: 'Southern Expressway (E01)', duration: '~1.5 hours', routeNo: 'Route 104' },
   ];
 
   // Live filtering of routes based on search query
@@ -201,7 +201,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="relative w-full h-[400px] bg-cover bg-center" 
-           style={{ backgroundImage: `url('/images/hero-image.jpg')` }}>
+           style={{ backgroundImage: `url('/images/b4.jpg')` }}>
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-medium text-gray-200 text-center">
             Routes
@@ -227,14 +227,7 @@ export default function Home() {
               <div className="col-span-1 md:col-span-2">
                 <label htmlFor="search-route" className="sr-only">Search Route</label>
                 <div className="relative">
-                  <input
-                    type="text"
-                    id="search-route"
-                    placeholder="Search by route, city, or destination"
-                    className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
+                  <input type="text" id="search-route" placeholder="Search by route, city, or destination" className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 transition-colors" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
                   <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                 </div>
               </div>

@@ -480,7 +480,7 @@ const generateQR = async () => {
 
       {/* Hero Section */}
       <div className="relative w-full h-[400px] bg-cover bg-center" 
-          style={{ backgroundImage: `url('/images/hero-image.jpg')` }}>
+          style={{ backgroundImage: `url('/images/b4.jpg')` }}>
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-medium text-gray-200 text-center">
             Buy Tickets

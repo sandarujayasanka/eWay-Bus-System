@@ -271,9 +271,6 @@ dependencies = [
 	{org = "ballerina", name = "lang.object"},
 	{org = "ballerina", name = "time"}
 ]
-modules = [
-	{org = "ballerina", packageName = "sql", moduleName = "sql"}
-]
 
 [[package]]
 org = "ballerina"
@@ -335,7 +332,6 @@ dependencies = [
 	{org = "ballerina", name = "crypto"},
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "log"},
-	{org = "ballerina", name = "sql"},
 	{org = "ballerinax", name = "mysql"}
 ]
 modules = [

@@ -9,8 +9,8 @@ eWay Bus is a full-stack platform that helps passengers explore routes, check sc
 
 Monorepo layout:
 ```
-ewaybus-api/    # Ballerina backend service
-ewaybus-web/    # React frontend (Vite)
+backend/    # Ballerina backend service
+frontend/    # React frontend (Vite)
 ```
 
 ## Prerequisites
@@ -22,11 +22,11 @@ ewaybus-web/    # React frontend (Vite)
 1) Clone the repo
 
 2) Backend setup
-   - cd `ewaybus-api`
+   - cd `backend`
    - Run: `bal run`
 
 3) Frontend setup
-   - cd `ewaybus-web`
+   - cd `frontend`
    - `npm install`
    - Run: `npm run dev`
 
@@ -36,14 +36,14 @@ ewaybus-web/    # React frontend (Vite)
 
 ### Backend (Ballerina)
 ```
-cd ewaybus-api
+cd backend
 bal run
 ```
-The API listens on http://localhost:9090.
+The API listens on http://localhost:8081.
 
 ### Frontend (Vite)
 ```
-cd ewaybus-web
+cd frontend
 npm install
 npm run dev
 ```
